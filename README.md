@@ -13,6 +13,8 @@ It is a (mostly) language-agnostic workshop, meaning that the principles are abo
 
 This workshop is an intensive two-days, six-blocks course. It was developed over 3 years by [George Datseris](https://github.com/Datseris/), combining textbooks, other workshops, online tutorials from field experts, blog posts, personal experience developing and documenting 10+ software, and research on how to make reproducible science.
 
+[Lukas Kluft](https://github.com/lkluft/) helped the workshop substantially by providing several Python examples, translating Julia code to Python, and reviewing the slides.
+
 ## Contents
 
 The workshop is divided into the following six blocks:
