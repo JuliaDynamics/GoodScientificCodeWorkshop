@@ -18,7 +18,7 @@ function trajdiscr(i, t; dt::Int = 1, ttr::Int = 0)
 end
 
 # Case 2
-function sat_pres(t)
+function saturation_pressure(t)
     e_eq_w_t = e_eq_water_mk.(t)
     e_eq_i_t = e_eq_ice_mk.(t)
     water = t .> constants.Ttr
