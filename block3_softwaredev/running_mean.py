@@ -3,55 +3,15 @@ import matplotlib.pyplot as plt
 
 
 def running_mean(x, win_size):
-    """Compute a running mean with a given window size.
-
-    Parameters:
-        x (ndarray): Input data.
-        win_size (int): Window size.
-
-    Returns:
-        ndarray: Smoothened data.
-    """
     return np.convolve(x, np.ones(w) / w, mode="valid")
 
 
 def running_mean(x, win_size, win_type=np.ones):
-    """Compute a running mean with a given window size.
-
-    Parameters:
-        x (ndarray): Input data.
-        win_size (int): Window size.
-        win_type (callable): A callable object that when passed a `win_size`
-            will return an array of weights.
-
-    Returns:
-        ndarray: Smoothened data.
-    """
     w = win_type(win_size)
     return np.convolve(x, w / w.sum(), mode="valid")
 
 
 def running_mean(x, win_size, win_type=np.ones, aggregation=None):
-    """Compute a running mean with a given window size.
-
-    Parameters:
-        x (ndarray): Input data.
-        win_size (int): Window size.
-        win_type (callable): A callable object that when passed a `win_size`
-            will return an array of weights.
-        aggregartion (callable): A callable object which aggregrates the data
-            within the window region. By default, the function computes a
-            running mean.
-
-    Note:
-        In the default configuration, i.e. a running mean, the function makes
-        use of a convolution which is implemented in a very efficient way.
-        When passing the `aggregation` keyword this approach is no
-        longer feasible because the data has to be explicitly "grouped".
-
-    Returns:
-        ndarray: Smoothened data.
-    """
     w = win_type(win_size)
 
     if aggregation is None:
