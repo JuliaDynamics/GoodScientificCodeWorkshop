@@ -29,14 +29,15 @@ end
     temporal_aggregation(t::AbstractVector{<:TimeType}, x::Vector;
     agg = mean, info = Dates.month)
 Calculate the temporally aggregated version of `x`, where it has been aggregated
-over periods of time dictated by the `info` function. Return `w, y` with
-`y` the aggregated values and `w` a new time vector corresponding to `y`.
-`w` has the temporal mid point of each used intervals.
+over periods of time dictated by the `info` function and the time vector `t`.
+Return `w, y` with `y` the aggregated values and `w` a new time vector
+corresponding to `y`. `w` has the temporal mid point of each used intervals.
 
 `info` decides the intervals used for aggregation. All sequential values
-of `x` that have the same `info` value belong to the same interval and are
-aggregated using `agg`. Typical values of `info` are `Dates.year, Dates.month, Dates.day`.
-You could define `summer(x) = month(x) ∈ (3,4,5,6,7,8)` and use `info = summer`
+of `t` that have the same `info` value belong to the same interval.
+For each interval `x` is aggregated using `agg`.
+Typical values of `info` are `Dates.year, Dates.month, Dates.day`.
+You could define `summer(t) = month(t) ∈ (3,4,5,6,7,8)` and use `info = summer`
 to find the ranges that correspond to successive "summers" and "winters".
 
 `agg` is the aggregating function, e.g., `mean, std`.
