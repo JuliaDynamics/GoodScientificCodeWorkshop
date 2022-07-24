@@ -11,7 +11,7 @@
 
 ## Elevator Pitch
 
-> _Scientific code is notorious for being hard to read and navigate, difficult to reproduce, and badly documented. One reason leading to this situation is that curricula that traditionally train scientists do not explicitly treat writing good code, and during the scientific life there is little time for the individual to practice this on their own. In this intensive two-day-block-workshop we will change that and teach you all you need to know to write code that is **Clear, Easy to understand, Well-documented, Reproducible, Testable, Reliable, Reusable, Extendable, and Generic.**_
+> _Scientific code is notorious for being hard to read and navigate, difficult to reproduce, and badly documented. One reason leading to this situation is that curricula that traditionally train scientists do not explicitly treat writing good code, and during the scientific life there is little time for the individual to practice this on their own. In this intensive block-based-workshop we will change that and teach you all you need to know to write code that is **Clear, Easy to understand, Well-documented, Reproducible, Testable, Reliable, Reusable, Extendable, and Generic.**_
 >
 > _Sounds too good to be true…? Join this workshop, and you will be surprised to find out that attributing all these properties to your code does not take much effort; once you have the proper education on the subject, you get all of this good stuff practically for free!_
 
