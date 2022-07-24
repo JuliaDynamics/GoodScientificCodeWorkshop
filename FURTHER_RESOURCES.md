@@ -12,5 +12,7 @@ The file contains links to useful material for good scientific coding. Some wher
 - [A Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf?utm_source=web&utm_medium=web&utm_campaign=better_science), by the British Ecological Society
 - [Code refinery lessons](https://coderefinery.org/lessons/)
 - [Software carpentry](https://software-carpentry.org/) organization website
+- [Unified Theory of Documentation](https://documentation.divio.com/) blogpost
+- [Write The Docs](https://www.writethedocs.org/) community website
 
 Feel free to add more resources here via the form of a pull request!
