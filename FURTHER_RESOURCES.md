@@ -1,5 +1,5 @@
 # Further resources
-The file contains links to useful material for good scientific coding. Some where already used to develop the workshop, some were discovered later.
+The file contains links to useful material for good scientific coding. Some were already used to develop the workshop, some were discovered later.
 
 - [A beginner’s guide to docs](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/), by Eric Holscher (co-founder of readthedocs)
 - Clean Architecture - A Craftmans guide to software structure and design, a textbook by Robert C Martin
