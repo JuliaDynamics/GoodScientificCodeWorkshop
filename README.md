@@ -16,10 +16,10 @@
 > _Sounds too good to be true…? Join this workshop, and you will be surprised to find out that attributing all these properties to your code does not take much effort; once you have the proper education on the subject, you get all of this good stuff practically for free!_
 
 ## Information
-This repository contains materials for the "Good Scientific Code" workshop.
-It is a (mostly) language-agnostic workshop, meaning that the principles are about general coding. Examples and exercises will be in Julia and Python.
+This repository contains the materials (presentation slides and exercises) for the "Good Scientific Code" workshop. Powerpoint version of the slides (for editing) is available on demand.
 
-This workshop is an intensive six-blocks course, aimed to be performed with tutors overseeing the exercises parts and helping the students. Students and their tutors are recommended to go through each block, one by one, and spend as much time as necessary until the students have understood the block and were able to solve all exercises (especially the application to their own code, see below). The expected time span for this to happen is about a day or two for each block.
+The workshop is (mostly) language-agnostic, meaning that the principles are about general coding. Examples and exercises will be in Julia and Python.
+It is structured as an intensive six-blocks course, aimed to be performed with tutors overseeing the exercises parts and helping the students. Students and their tutors are recommended to go through each block, one by one, and spend as much time as necessary until the students have understood the block and were able to solve all exercises (especially the application to their own code, see below). The expected time span for this to happen is about a day or two for each block.
 
 This workshop was developed over 3 years by [George Datseris](https://github.com/Datseris/), combining textbooks, other workshops, online tutorials from field experts, blog posts, personal experience developing and documenting 10+ software, and research on how to make reproducible science.
 
