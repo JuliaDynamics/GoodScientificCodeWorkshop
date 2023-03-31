@@ -1,12 +1,15 @@
 # Good Scientific Code Workshop
 ![](Good_Scientific_Code_logo.png)
 
+[![DOI](https://zenodo.org/badge/515197201.svg)](https://zenodo.org/badge/latestdoi/515197201)
+
 **Table of Contents**
 1. [Elevator Pitch](#elevator-pitch)
 2. [Information](#information)
 3. [Contents](#contents)
 4. [Bring your own code!](#bring-your-own-code)
 5. [YouTube recording](#youtube-recording)
+6. [Citing](#citing)
 
 
 ## Elevator Pitch
@@ -43,3 +46,17 @@ _Note: for this plan to have meaningful impact, you should bring a code base whe
 
 ## YouTube recording
 A video recording of the live version of this workshop, performed at the Max Planck Institute for Meteorology, is available on YouTube: https://youtu.be/x3swaMSCcYk .
+
+## Citing
+
+You can cite this material using the DOI 10.5281/zenodo.7789872  or the following BibTeX entry:
+
+```latex
+@MISC{goodscientificcode,
+  title     = "Good scientific code workshop",
+  author    = "Datseris, George",
+  abstract  = "An intensive block-based-workshop we will change that and teach you all you need to know to write code that is Clear, Easy to understand, Well-documented, Reproducible, Testable, Reliable, Reusable, Extendable, and Generic.",
+  publisher = "Zenodo",
+  year      =  2023
+}
+```
