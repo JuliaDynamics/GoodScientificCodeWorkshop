@@ -51,7 +51,7 @@ A video recording of the live version of this workshop, performed at the Max Pla
 
 You can cite this material using the DOI 10.5281/zenodo.7789872  or the following BibTeX entry:
 
-```latex
+```
 @MISC{goodscientificcode,
   title     = "Good scientific code workshop",
   author    = "Datseris, George",
