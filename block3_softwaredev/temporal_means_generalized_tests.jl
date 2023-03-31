@@ -3,7 +3,7 @@ using Dates
 using Test
 
 # This file tests only `monthlyagg`.
-# Of cousre, many more tests should be written for aggregating
+# Of course, many more tests should be written for aggregating
 # over different time spans!
 
 @testset "monthly means" begin

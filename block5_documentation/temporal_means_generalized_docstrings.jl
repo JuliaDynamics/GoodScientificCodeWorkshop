@@ -51,7 +51,7 @@ function temporal_aggregation(t::AbstractVector{<:TimeType}, x::Vector;
     y = [agg(view(x, r)) for r in tranges]
     coarse_t = [middle_date(t[r[1]], t[r[end]]) for r in tranges]
     # TODO: We can have a `prettify_coarse_t` function to make
-    # the time vector better in cases where it is possble,
+    # the time vector better in cases where it is possible,
     # e.g. like t[1]:Month(1):t[end]
     return coarse_t, y
 end
