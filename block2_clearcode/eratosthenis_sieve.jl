@@ -5,12 +5,12 @@
 # Repeat until you have passed the square root of `N`.
 # The uncrossed numbers that remain are all the primes less than `N`.
 
-# quick notice: this is a verbatic port of a Java code to Julia,
+# quick notice: this is a verbatim port of a Java code to Julia,
 # and as such it is unreasonably low level.
 
 function eratosthenis_sieve(N)
     if N >= 2 # the only valid case
-        # Declerations:
+        # Declarations:
         f = Bool[]
         i = 0
         # initialize array to true
@@ -51,7 +51,7 @@ function eratosthenis_sieve(N)
         end
         return primes # return the primes
     else # if N < 2
-        return Int[] # return null array if bad imput
+        return Int[] # return null array if bad input
     end
 end
 

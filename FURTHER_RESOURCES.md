@@ -8,7 +8,7 @@ Feel free to add more resources here via the form of a pull request!
 - [Write The Docs](https://www.writethedocs.org/) community website
 
 ## Code writing and architecture
-- Clean Architecture - A Craftmans guide to software structure and design, a textbook by Robert C Martin
+- Clean Architecture - A Craftsman's Guide to Software Structure and Design, a textbook by Robert C Martin
 - Clean Code - A Handbook of Agile Software Craftsmanship, a textbook by Robert C Martin
 - [Single Responsibility Principle blog post](https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html), by Robert C Martin
 - [Clean Code Blog](https://blog.cleancoder.com/), by Robert C Martin

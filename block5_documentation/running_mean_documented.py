@@ -39,7 +39,7 @@ def running_mean(x, win_size, win_type=np.ones, aggregation=None):
         win_size (int): Window size.
         win_type (callable): A callable object that when passed a `win_size`
             will return an array of weights.
-        aggregartion (callable): A callable object which aggregrates the data
+        aggregation (callable): A callable object which aggregates the data
             within the window region. By default, the function computes a
             running mean.
 

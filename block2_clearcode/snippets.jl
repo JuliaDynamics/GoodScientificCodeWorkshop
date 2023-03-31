@@ -163,7 +163,7 @@ end
 # validate protein sequence
 valid = validate_sequence(protein_seq)
 
-# return true if all aminoacids are valid
+# return true if all amino acids are valid
 !valid && error("Invalid")
 
 toks = split(line)
