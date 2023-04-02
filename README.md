@@ -52,11 +52,14 @@ A video recording of the live version of this workshop, performed at the Max Pla
 You can cite this material using the DOI 10.5281/zenodo.7789872  or the following BibTeX entry:
 
 ```
-@MISC{goodscientificcode,
-  title     = "Good scientific code workshop",
-  author    = "Datseris, George",
-  abstract  = "An intensive block-based-workshop we will change that and teach you all you need to know to write code that is Clear, Easy to understand, Well-documented, Reproducible, Testable, Reliable, Reusable, Extendable, and Generic.",
-  publisher = "Zenodo",
-  year      =  2023
+@software{goodscientificcode,
+  author       = {George Datseris},
+  title        = {{Good scientific code workshop}},
+  month        = mar,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.7789872},
+  url          = {https://doi.org/10.5281/zenodo.7789872}
 }
 ```
