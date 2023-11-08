@@ -19,6 +19,7 @@
 > _Sounds too good to be true…? Join this workshop, and you will be surprised to find out that attributing all these properties to your code does not take much effort; once you have the proper education on the subject, you get all of this good stuff practically for free!_
 
 ## Information
+
 This repository contains the materials (presentation slides and exercises) for the "Good Scientific Code" workshop. Powerpoint version of the slides (for editing) is available on demand.
 
 The workshop is (mostly) language-agnostic, meaning that the principles are about general coding. Examples and exercises will be in Julia and Python.
@@ -40,11 +41,13 @@ The workshop is divided into the following six blocks:
 - **Scientific project reproducibility**: publish reproducible papers
 
 ## Bring your own code!
-The exercise sessions have two components. On the first, illustrative but simple exercises are given to the participants to practice each topic. Participants are expected to solve the exercises live during the workshop! The second component requires the participants to apply this new knowledge to their very own code base. Therefore, please bring along all code you have used in your latest published paper. If you haven’t published yet, no worries, bring along all the code you have at the moment for your science project. Decide in advance on 2-3 figures of your paper/project, which will be the central focus of the exercises. The exercise plan will transform your code from random scripts to a self-contained code base that is understandable, extendable, continuously tested, documented, and hosted on open and accessible platforms.
+
+The exercise sessions have two components. On the first, illustrative but simple exercises are given to the participants to practice each topic. Participants are expected to solve the exercises live during the workshop! The second component requires the participants to apply this new knowledge to their very own code base. Therefore, please bring along all code you have used in your latest published paper. If you haven't published yet, no worries, bring along all the code you have at the moment for your science project. Decide in advance on 2-3 figures of your paper/project, which will be the central focus of the exercises. The exercise plan will transform your code from random scripts to a self-contained code base that is understandable, extendable, continuously tested, documented, and hosted on open and accessible platforms.
 
 _Note: for this plan to have meaningful impact, you should bring a code base where you had to write a substantial amount of source code._
 
 ## YouTube recording
+
 A video recording of the live version of this workshop, performed at the Max Planck Institute for Meteorology, is available on YouTube: https://youtu.be/x3swaMSCcYk .
 
 ## Citing
