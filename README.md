@@ -52,7 +52,7 @@ A video recording of the live version of this workshop, performed at the Max Pla
 
 ## Citing
 
-You can cite this material using the DOI 10.5281/zenodo.7789872  or the following BibTeX entry:
+You can cite this material using the DOI 10.5281/zenodo.7789872, or the following BibTeX entry:
 
 ```
 @software{goodscientificcode,
@@ -66,3 +66,4 @@ You can cite this material using the DOI 10.5281/zenodo.7789872  or the followin
   url          = {https://doi.org/10.5281/zenodo.7789872}
 }
 ```
+
