@@ -36,10 +36,15 @@ jobs:
       # This is really all you care about; 2-steps process
       # step 1, assumming the documentation Project.toml file is in `docs` folder
       - name: Install docs dependencies
-        run: julia --project=docs/ 'using Pkg; Pkg.instantiate()'
+        run: julia --project=docs/ -e 'using Pkg; Pkg.instantiate()'
       # step 2 (note project path remains the same!)
       - name: Build and deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
-          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
+          # An access token must be provided to "push" the documentation build.
+          # GitHub automates this via your account with this line:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # See the discussion around "TagBot" in the Documenter.jl website:
+          # https://documenter.juliadocs.org/stable/man/hosting/#GitHub-Actions
+          # for automating creating tagged documentation builds after
+          # registering your package in the Julia General Registry
         run: julia --project=docs/ docs/make.jl
