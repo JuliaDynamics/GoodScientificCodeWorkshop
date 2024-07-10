@@ -23,20 +23,19 @@ jobs:
 
 # Now this is where things focus on the documentation
 # build and deployment.
-
-# IMPORTANT! If your documentation is for a Julia package,
-# with formal Julia package structure (`src` folder and top level Project.toml)
-# then you need to include this extra step (simply uncomment it):
-
-      # - name: Develop local package
-      #   run: julia -e 'using Pkg; Pkg.develop(path="."); Pkg.instantiate()'
-
 # The next steps continue with the `doc` folder build.
 
       # This is really all you care about; 2-steps process
-      # step 1, assumming the documentation Project.toml file is in `docs` folder
+      # step 1, assuming the documentation Project.toml file is in `docs` folder
+      # This works for the standard Julia package layouts (i.e. a Project.toml and
+      # a src/ directory at the top-level).
       - name: Install docs dependencies
-        run: julia --project=docs/ -e 'using Pkg; Pkg.instantiate()'
+        run: julia -e 'using Pkg; Pkg.develop(path="."); Pkg.instantiate()'
+        # If you are committing the docs/Manifest.toml file, to fully fix the package
+        # versions used by the documentation package environment, you can use this
+        # line instead. You just need to make sure that the package is a develop-dependency
+        # in the docs/Manifest.toml
+        #run: julia --project=docs/ -e 'using Pkg; Pkg.instantiate()'
       # step 2 (note project path remains the same!)
       - name: Build and deploy
         env:
