@@ -62,8 +62,8 @@ You can cite this material using the DOI 10.5281/zenodo.7789872, or the followin
   year         = 2023,
   publisher    = {Zenodo},
   version      = {v1.0},
-  doi          = {10.5281/zenodo.7789872},
-  url          = {https://doi.org/10.5281/zenodo.7789872}
+  doi          = {10.5281/zenodo.7789871},
+  url          = {https://doi.org/10.5281/zenodo.7789871}
 }
 ```
 
