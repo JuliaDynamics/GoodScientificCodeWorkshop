@@ -1,5 +1,5 @@
 # # Case 1
-function traj(ds::DiscreteDynamicalSystem, t::Int, u = ds.u0; kwargs...)
+function traj(ds, t::Int, u = ds.u0; kwargs...)
     i = integrator(ds, u)
     trajdiscr(i, t; kwargs...)
 end
@@ -10,7 +10,7 @@ function trajdiscr(i, t; dt::Int = 1, ttr::Int = 0)
     ttr ≠ 0 && step!(i, ttr)
     data = Vector{typeof((get_state(i))}(undef, L)
     data = [get_state(i)]
-    for i in 2:length(timevec)
+    for _ in 2:length(timevec)
         step!(i, dt)
         push!(data, get_state(i))
     end

@@ -17,7 +17,7 @@ function trajectory_discrete(integrator, total_time;
     timevec = (t0+transient_time):time_step:(t0+total_time+transient_time)
     transient_time ≠ 0 && step!(integrator, transient_time)
     traj = [get_state(integrator)]
-    for i in 2:length(timevec)
+    for _ in 2:length(timevec)
         step!(integrator, time_step)
         push!(traj, get_state(integrator))
     end
