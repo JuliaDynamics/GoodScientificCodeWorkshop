@@ -1,10 +1,12 @@
 include("temporal_means_generalized.jl")
 using Dates
 using Test
+using Statistics
 
-# This file tests only `monthlyagg`.
+# This file tests only the `monthlymeans, monthlyagg` functions.
 # Of course, many more tests should be written for aggregating
 # over different time spans!
+monthlyagg(x, t; aggregator = mean) = temporal_aggregation(t, x; aggregator, window = Dates.month)
 
 @testset "monthly means" begin
     @testset "API" begin
@@ -64,15 +66,15 @@ using Test
         x = [1, 3, 1, 3]
         s2 = sqrt(2)
         # std
-        w, y = monthlyagg(t, x; agg = std)
+        w, y = monthlyagg(t, x; aggregator = std)
         @test y[1] == y[2] == s2
         # length
-        w, y = monthlyagg(t, x; agg = length)
+        w, y = monthlyagg(t, x; aggregator = length)
         @test y[1] == y[2] == 2
         # negative fractions
         x = [0.5, -0.5, 0.25, 0.1]
         neg_fracts(vals) = count(v -> v < 0, vals)/length(vals)
-        w, y = monthlyagg(t, x; agg = neg_fracs)
+        w, y = monthlyagg(t, x; aggregator = neg_fracs)
         @test y[1] == 0.5
         @test y[2] == 0
     end

@@ -5,46 +5,50 @@ of the code surrounding `monthlyagg` and co. in ClimateBase.jl.
 using Dates
 using Statistics
 
-monthlymeans(t, x) = monthlyagg(t, x; agg = mean)
-
-function monthlyagg(t, x; agg = mean)
-    return temporal_aggregation(t, x; agg, info = Dates.month)
-end
-
-function temporal_aggregation(t::AbstractVector{<:TimeType}, x::Vector;
-        agg = mean, info = Dates.month
+# This is the "main" function of the codebase:
+# it performs a temporal aggregation over provided "window"
+# using provided aggregator. The "window" function can actually be anything
+# that takes in a date and returns a value: consecutive entries with the same
+# value belong to the same temporal window.
+# The function then returns the coarse (middle point)
+# time vector of the windows and the corresponding aggregated timeseries
+function temporal_aggregation(t::AbstractVector{<:TimeType}, x::AbstractVector;
+        aggregator = mean, window = Dates.month
     )
-    tranges = temporal_ranges(t, info)
-    y = [agg(view(x, r)) for r in tranges]
+    tranges = temporal_ranges(t, window)
+    y = [aggregator(view(x, r)) for r in tranges]
     coarse_t = [middle_date(t[r[1]], t[r[end]]) for r in tranges]
-    # TODO: We can have a `prettify_coarse_t` function to make
-    # the time vector better in cases where it is possible,
-    # e.g. like t[1]:Month(1):t[end]
     return coarse_t, y
 end
 
-middle_date(t0, t1) = ((d0, d1) = DateTime.((t0, t1)); d0 + (d1 - d0)/2)
-
-function temporal_ranges(t::AbstractArray{<:TimeType}, info = Dates.month)
-    @assert issorted(t) "Sorted time required."
+# splits the dates into ranges, each range corresponding to the requested window
+function temporal_ranges(t::AbstractArray{<:TimeType}, window = Dates.month)
+    issorted(t) || error("Sorted time vector required.") # checker step!
     L = length(t)
-    r = Vector{UnitRange{Int}}()
-    i, x = 1, info(t[1]) # previous entries
+    ranges = Vector{UnitRange{Int}}() # initialize an empty vector
+    i, previous = 1, window(t[1])
     for j in 2:L
-        y = info(t[j])
-        x == y && continue
-        push!(r, i:(j-1))
-        i, x = j, y
+        current = window(t[j])
+        previous == current && continue
+        push!(ranges, i:(j-1))
+        i, previous = j, current
     end
-    push!(r, i:L) # final range not included in for loop
-    return r
+    push!(ranges, i:L) # final range not included in for loop
+    return ranges
 end
 
-# Testing vectors
+# function for creating a new time vector for the aggregated timeseries
+middle_date(t0, t1) = DateTime(t0) + (DateTime(t1) - DateTime(t2))/2
+
+# the previous month mean functionality can still exist as a convenience function:
+monthlymeans(t, x) = temporal_aggregation(t, x; aggregator = mean, window = Dates.month)
+
+# Test from monthly means exercise
 t = Date(2015, 1, 1):Day(1):Date(2020, 12, 31)
 x = float.(month.(t))
 m, y = monthlymeans(t, x)
 
-# Test with summer and winter
+# So how do we do it with summer and winter? Easy; just make a window function
+# that assigns the same value to all summer months, and another value to all winter months!
 summer(x) = month(x) ∈ (3,4,5,6,7,8)
-m, y = temporal_aggregation(t, x; info = summer)
+m, y = temporal_aggregation(t, x; window = summer)

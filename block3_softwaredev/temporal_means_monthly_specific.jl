@@ -11,11 +11,11 @@ function monthlymeans(t::AbstractVector{<:TimeType}, x::Vector; daynumber = 15)
     startdate = Date(year(t[1]), month(t[1]), daynumber)
     finaldate = Date(year(t[end]), month(t[end]), daynumber)
     m = startdate:Month(1):finaldate
-    output = aggregate_same_months(t, x, m)
+    output = average_over_same_months(t, x, m)
     return m, output
 end
 
-function aggregate_same_months(t, x, m)
+function average_over_same_months(t, x, m)
     output = zeros(length(m)) # output, monthly means of `x`
     first_index_in_month = 1
     for j in 1:length(m)
