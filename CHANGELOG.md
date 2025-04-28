@@ -2,6 +2,18 @@
 
 Changelog for this Good Scientific Code Workshop is kept with respect to version v1 (the first published version).
 
+## 1.5
+
+Some improvements in Block 6:
+
+- Renamed to Open and Reproducible research
+- Solved the reproducibility vs replicability terminology with a dedicated slide
+- More emphasis on forgotten variables
+- Separated the block conceptually a bit more on reproducibility and openness
+- A couple of extra slides
+- Reliability of open source
+- Small victories for open source
+
 ## 1.4
 
 Many improvements in Block 3:
